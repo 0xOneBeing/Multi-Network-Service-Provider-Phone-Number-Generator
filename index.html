@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learning JavaScript</title>
+	<link rel="stylesheet" href="../../resources/bootstrap-3.3.7/dist/css/bootstrap.min.css">
+	<script src="../../resources/bootstrap-3.3.7/dist/js/popper.min.js"></script>
+	<script src="../../resources/bootstrap-3.3.7/dist/js/jquery-3.3.1.slim.min.js"></script>
+	<script src="../../resources/bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
+	<style>
+		.mtn, .eti, .air, .glo {
+			padding-top: 50px;
+		}
+		p {
+			border: 4px dashed white;
+			font-size: 25px;
+			padding: 5px;
+		}
+		.glyphicon-copy {
+			float: right;
+		}
+	</style>
+</head>
+<body style="font-weight: bold; color: white; background-color: black;">
+	<div class="wrapper">
+		<div class="container text-center">
+			<div class="row">
+				<div class="mtn col-xs-12 col-sm-6 col-md-6 col-lg-3">
+					<h1>MTN NG</h1>
+					<div class="row">
+						<p id="mtn">
+							num
+						</p>
+						<span data-toggle="tooltip" title="Copy Text!" data-placement="right" class="glyphicon glyphicon-copy"></span>
+					</div>
+					<button onClick="document.getElementById('mtn').innerHTML = Mtn()" type="button" class="btn btn-lg btn-warning">Generate</button>
+				</div>
+				<div class="eti col-xs-12 col-sm-6 col-md-6 col-lg-3">
+					<h1>Etisalat NG</h1>
+					<div class="row">
+						<p id="eti">
+							num
+						</p>
+						<span data-toggle="tooltip" title="Copy Text!" data-placement="right" class="glyphicon glyphicon-copy"></span>
+					</div>
+					<button onClick="document.getElementById('eti').innerHTML = Eti()" type="button" class="btn btn-lg btn-success">Generate</button>
+				</div>
+				<div class="air col-xs-12 col-sm-6 col-md-6 col-lg-3">
+					<h1>Airtel NG</h1>
+					<div class="row">
+						<p id="air">
+							num
+						</p>
+						<span data-toggle="tooltip" title="Copy Text!" data-placement="right" class="glyphicon glyphicon-copy"></span>
+					</div>
+					<button onClick="document.getElementById('air').innerHTML = Air()" type="button" class="btn btn-lg btn-danger">Generate</button>
+				</div>
+				<div class="glo col-xs-12 col-sm-6 col-md-6 col-lg-3">
+					<h1>GLO NG</h1>
+					<div class="row">
+						<p id="glo">
+							num
+						</p>
+						<span data-toggle="tooltip" title="Copy Text!" data-placement="right" class="glyphicon glyphicon-copy"></span>
+					</div>
+					<button onClick="document.getElementById('glo').innerHTML = Glo()" type="button" class="btn btn-lg btn-success">Generate</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<h6 id="disp"></h6>
+	
+	<script>
+		"use strict";
+
+		function randomSeven() {
+			var seven = 0;
+			seven = Math.floor((Math.random() * 9999999) - 1010101);
+			return seven;
+		}
+
+		function Mtn() {
+			let num = "0803";
+			num += randomSeven();
+			return num;
+		}
+		function Eti() {
+			let num = "0809";
+			num += randomSeven();
+			return num;
+		}
+		function Air() {
+			let num = "0802";
+			num += randomSeven();
+			return num;
+		}
+		function Glo() {
+			let num = "0807";
+			num += randomSeven();
+			return num;
+		}
+	</script>
+</body>
+</html>
